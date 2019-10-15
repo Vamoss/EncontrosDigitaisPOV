@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+}
+
+#content {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.block {
+    clear: both;
+    margin-bottom: 30px;
+}
+
+.editor-container {
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    flex-direction: row;
+}
+
+.header {
+    display: flex;
+    flex-direction: row; 
+}
+.canvas-container {
+    float: left; 
+    display: flex;
+    flex-direction: column;
+}
+
+.p5-canvas-container {
+    width: 400px;
+    height: 390px;
+    min-height: 390px;
+    overflow: auto;
+    border: 4px solid black;
+}
+
+.text-editor {
+    width: 500px;
+    height: 400px;
+    float: left; 
+}
+
+#blockTemplate {
+    display: none;
+}
