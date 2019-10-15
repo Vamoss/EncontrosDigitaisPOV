@@ -2,59 +2,46 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <title>Py5js Notebook</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.4/ace.js"></script>
-    <script src="./lib/pyodide_dev.js"></script>
+    <script src="https://pyodide.cdn.iodide.io/pyodide.js"></script>
     <script src="Py5.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
   </head>
-  <body>
+  <body class="loading">
     <div id="content">
       <div class="header">
-        <h1>Multiple Dynamically Py5js</h1>
+        <h1>Py5js Notebook</h1>
       </div>
+      <img class="loading-image" src="images/loading.gif"/>
       <div id="blocks">
       </div>
       <button class="add-button">Add new</button>
+      <br/><br/>
+      <a href="https://github.com/vamoss/encontrosdigitaispov" target="_blank">Github Repositoty</a>
     </div>
     <div id="blockTemplate" class="block">
-      <button class="run-button">Run Code</button>
-      <div class="editor-containter">
-        <div class="text-editor">
+      <div class="canvas-container"></div>
+      <div class="editor-container">
+        <div class="code-menu">
+          <button class="run-button">RUN &lt;shift+enter&gt;</button>
+          <select class="language-select">
+            <option>Python</option>
+            <!--<option>Markdown</option>
+            <option>HTML</option>
+            <option>Javascript</option>-->
+          </select>
         </div>
-        <div class="canvas-container">
-          <div class="p5-canvas-container">
-          </div>
-        </div>
+        <div class="text-editor">def setup():
+  createCanvas(978, 400)
+
+def draw():
+  circle(mouseX, mouseY, 10, 10)</div>
+      </div>
+      <div class="edit-menu">
       </div>
     </div>
-    <div>
-      Py5.js Demo by @lucapodular
-    </div>
-    <!--
-    <div id="info-box">
-      <h3>This Exciting (but untested) Demo Includes:</h3>
-      <h4>Structure</h4>
-      <p>setup(), draw(), createCanvas()</p>
-      <h4>2D Primitives</h4>
-      <p>arc(), ellipse(), circle(), line(), point(), quad(), rect(), square(), triangle()</p>
-      <h4>Color</h4>
-      <p>background(), fill()</p>
-      <h4>Mouse Variables</h4>
-      <p>mouseX, mouseY, pmouseX, pmouseY, winMouseX, winMouseY, pwinMouseX, pwinMouseY, mouseButton, mouseIsPressed</p>
-      <h4>Key Variables</h4>
-      <p>keyIsPressed, key, keyCode</p>
-      <h4>Mouse Events</h4>
-      <p>mouseMoved(), mouseDragged(), mousePressed(), mouseReleased(), mouseClicked(), doubleClicked(), mouseWheel()</p>
-      <h4>Key Events</h4>
-      <p>keyPressed(), keyReleased(), keyIsDown()</p>
-      <h4>Random</h4>
-      <p>random()</p>
-    </div>
-    
-
-    -->
-
   </body>
 </html>

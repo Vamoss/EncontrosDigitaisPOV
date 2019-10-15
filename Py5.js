@@ -1,12 +1,4 @@
-// Initialize Pyodide, import document, py, window, into python's scope.
-languagePluginLoader.then(() => {
-    pyodide.runPython(`
-      import io, code, sys
-      from js import pyodide, p5, window, document
-    `)
-});
-
-function createPy5Code(code, canvasId) { 
+function createPy5Code(code, id, canvasId) { 
 return code + `
 def updateVariables(p):
   global mouseX, mouseY, pMouseX, pMouseY, winMouseX, winMouseY, pwinMouseX, pwinMouseY, mouseButton, mouseIsPressed
